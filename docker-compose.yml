@@ -1,0 +1,25 @@
+# docker-compose.yml
+
+version: "3.7"
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./server/db/docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+      - trovobot-db:/var/lib/postgresql/data
+
+  trovobot:
+    build:
+      context: .
+    depends_on:
+      - postgres
+    ports:
+      - '40001:40001'
+
+volumes:
+  trovobot-db:

@@ -1,0 +1,37 @@
+{
+  "name": "trovobot.online",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "pm2": "pm2 start processes.json --no-daemon",
+    "start": "node ./index.js",
+    "test": "jest",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "passport": "^0.4.1",
+    "passport-streamlabs": "^1.0.3",
+    "passport-trovo.js": "0.0.1",
+    "pg": "^8.3.0",
+    "pm2": "^4.4.0",
+    "request": "^2.88.2",
+    "sequelize": "^6.3.4"
+  },
+  "devDependencies": {
+    "jest": "^26.2.2",
+    "sequelize-cli": "^6.2.0"
+  }
+}
