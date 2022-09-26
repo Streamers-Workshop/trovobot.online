@@ -26,7 +26,7 @@
     "passport-streamlabs": "^1.0.3",
     "passport-trovo.js": "0.0.1",
     "pg": "^8.3.0",
-    "pm2": "^4.4.0",
+    "pm2": "^5.2.0",
     "request": "^2.88.2",
     "sequelize": "^6.3.4"
   },
